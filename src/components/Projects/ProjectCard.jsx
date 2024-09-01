@@ -1,11 +1,17 @@
-import React from "react";
-
-import styles from "./ProjectCard.module.css";
-import { getImageUrl } from "../../utils";
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import styles from './ProjectCard.module.css';
+import { getImageUrl } from '../../utils';
 
 export const ProjectCard = ({
-  project: { title, imageSrc, description, skills, demo, source },
+  project: { title, imageSrc, description, skills, demo, source, screenshots },
 }) => {
+  const navigate = useNavigate(); // Use useNavigate
+
+  const handleDemoClick = () => {
+    navigate('/screenshots', { state: { screenshots, description } }); 
+  };
+
   return (
     <div className={styles.container}>
       <img
@@ -15,22 +21,11 @@ export const ProjectCard = ({
       />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => {
-          return (
-            <li key={id} className={styles.skill}>
-              {skill}
-            </li>
-          );
-        })}
-      </ul>
+     
       <div className={styles.links}>
-        <a href={demo} className={styles.link}>
-          Demo
-        </a>
-        <a href={source} className={styles.link}>
-          Source
-        </a>
+        <button onClick={handleDemoClick} className={styles.link}>
+          More
+        </button>
       </div>
     </div>
   );

@@ -11,20 +11,20 @@ export const Contact = () => {
         <p>Feel free to reach out!</p>
       </div>
       <ul className={styles.links}>
+
+        <li className={styles.link}>
+          <a href="https://www.facebook.com/profile.php?id=100073310405989&locale=fr_FR">contact on facebook</a>
+        </li>
         <li className={styles.link}>
           <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
-          <a href="mailto:myemail@email.com">myemail@email.com</a>
+          <a href="mailto:chaimalaouarstahi@gmail.com">chaimalaouarstahi@gmail.com</a>
         </li>
         <li className={styles.link}>
           <img
             src={getImageUrl("contact/linkedinIcon.png")}
             alt="LinkedIn icon"
           />
-          <a href="https://www.linkedin.com/myname">linkedin.com/myname</a>
-        </li>
-        <li className={styles.link}>
-          <img src={getImageUrl("contact/githubIcon.png")} alt="Github icon" />
-          <a href="https://www.github.com/myname">github.com/myname</a>
+          <a href="www.linkedin.com/in/chaima-laouar-stahi-ab4489285">linkedin.com/chaima</a>
         </li>
       </ul>
     </footer>

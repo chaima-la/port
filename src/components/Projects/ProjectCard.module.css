@@ -8,6 +8,7 @@
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
   max-width: 345px;
+  margin: 20px auto; /* Margin outside the container */
 }
 
 .image {
@@ -58,4 +59,31 @@
   border-radius: 100px;
   background: var(--color-primary);
   padding: 1px 22px;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 12px 16px; /* Reduce padding for smaller screens */
+    margin: 10px auto; /* Reduce margin for smaller screens */
+    max-width: 100%; /* Make container full-width on smaller screens */
+  }
+
+  .title {
+    font-size: 20px; /* Reduce font size */
+  }
+
+  .description {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .skill {
+    font-size: 18px; /* Reduce font size */
+    padding: 2px 12px; /* Adjust padding */
+  }
+
+  .link {
+    font-size: 24px; /* Reduce font size */
+    padding: 1px 12px; /* Adjust padding */
+  }
 }

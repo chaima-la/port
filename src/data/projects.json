@@ -1,26 +1,39 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "e learning platform",
+    "imageSrc": "projects/e-a.png",
+    "description": "An e-learning platform with interactive courses , designed for seamless multi-device access",
     "skills": ["React", "Express", "Node"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://www.github.com",
+    "screenshots" : [
+                      "projects/e-landing.png",
+                      "projects/e-course.png"]
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "delivery ",
+    "imageSrc": "projects/del-a.png",
+    "description": "A delivery management system for fastfoods that allow you to control all your orders and menu",
     "skills": ["React", "Express", "Node", "Sass"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://www.github.com",
+    "screenshots" : ["projects/del-landing.png",
+                      "projects/del-menu.png",
+                      "projects/del-cat.png",
+                      "projects/del-product.png"]
   },
   {
     "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "imageSrc": "projects/com-a.png",
+    "description": "An intuitive online store with comprehensive admin controls for seamless product management and sales oversight.",
     "skills": ["React", "Express", "Node"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://www.github.com",
+    "screenshots" : ["projects/com-m.png",
+                      "projects/com-cart.png",
+                      "projects/com-details.png",
+                      "projects/com-order.png",
+                      "projects/com-orderr.png",
+                      "projects/com-product.png"]
   }
 ]

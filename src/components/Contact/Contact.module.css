@@ -10,16 +10,22 @@
   width: 100vw;
   padding: 58px 10%;
   gap: 10px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.text {
+  flex: 1; /* Allows text to take up available space */
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: 45px;
   font-weight: 700;
   letter-spacing: 4px;
+  margin-bottom: 10px; /* Space between heading and paragraph */
 }
 
 .text p {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -30,6 +36,7 @@
   align-items: flex-start;
   list-style: none;
   gap: 26px;
+  flex: 1; /* Allows links to take up available space */
 }
 
 .link {
@@ -38,27 +45,62 @@
   gap: 25px;
 }
 
+.link img {
+  width: 30px; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 1.5px;
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
-    gap: 23px;
+    padding: 40px 5%; /* Adjust padding for smaller screens */
+    gap: 20px; /* Adjust gap */
   }
 
   .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center; /* Center text on smaller screens */
   }
 
   .links {
     align-items: center;
+  }
+
+  .link img {
+    width: 24px; /* Reduce image size for smaller screens */
+  }
+
+  .link a {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px 2%; /* Further reduce padding on very small screens */
+  }
+
+  .text h2 {
+    font-size: 30px; /* Reduce heading size */
+  }
+
+  .text p {
+    font-size: 18px; /* Reduce paragraph size */
+  }
+
+  .link a {
+    font-size: 18px; /* Further reduce link font size */
+  }
+
+  .link img {
+    width: 20px; /* Further reduce image size */
   }
 }

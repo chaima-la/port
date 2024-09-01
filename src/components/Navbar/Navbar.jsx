@@ -1,43 +1,43 @@
-import React, { useState } from "react";
-
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Close the menu when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">
-        Portfolio
-      </a>
-      <div className={styles.menu}>
-        <img
-          className={styles.menuBtn}
-          src={
-            menuOpen
-              ? getImageUrl("nav/closeIcon.png")
-              : getImageUrl("nav/menuIcon.png")
-          }
-          alt="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-        <ul
-          className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-          onClick={() => setMenuOpen(false)}
-        >
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+      <Link to="/" className={styles.title}>Portfolio</Link>
+      <div className={styles.menuBtn} onClick={toggleMenu}>
+        ☰ {/* Unicode character for menu icon */}
+      </div>
+      <div ref={menuRef} className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
+        <ul className={styles.menuItems}>
+          <li><Link to="/" className={styles.link} onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/about" className={styles.link} onClick={closeMenu}>About</Link></li>
+          <li><Link to="/experience" className={styles.link} onClick={closeMenu}>Experience</Link></li>
+          <li><Link to="/projects" className={styles.link} onClick={closeMenu}>Projects</Link></li>
         </ul>
       </div>
     </nav>

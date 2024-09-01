@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.container h1 {
+  color: aliceblue;
+  padding-bottom: 40px;
+}
+
+.container p {
+  font-size: 18px; /* Adjust as needed */
+  font-weight: 400;
+  color: aliceblue;
+  margin: 20px 0; /* Add margin for spacing */
+  line-height: 1.5; /* Adjust line height for readability */
+  max-width: 800px; /* Ensure the paragraph does not exceed slider width */
+  margin: 20px auto; /* Center the paragraph and add vertical margin */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust to fit your design */
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflowing parts of the image */
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  transform: translateY(-50%);
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.arrow:first-of-type {
+  left: 10px;
+}
+
+.arrow:last-of-type {
+  right: 10px;
+}
