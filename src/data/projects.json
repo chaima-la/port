@@ -11,7 +11,7 @@
                       "projects/e-course.png"]
   },
   {
-    "title": "delivery ",
+    "title": "delivery website",
     "imageSrc": "projects/del-a.png",
     "description": "A delivery management system for fastfoods that allow you to control all your orders and menu",
     "skills": ["React", "Express", "Node", "Sass"],
@@ -23,7 +23,7 @@
                       "projects/del-product.png"]
   },
   {
-    "title": "Project C",
+    "title": "e commerce website",
     "imageSrc": "projects/com-a.png",
     "description": "An intuitive online store with comprehensive admin controls for seamless product management and sales oversight.",
     "skills": ["React", "Express", "Node"],
